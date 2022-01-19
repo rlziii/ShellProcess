@@ -1,3 +1,3 @@
 # ShellProcess
 
-A description of this package.
+A lightweight wrapper around Foundation's `Process`.

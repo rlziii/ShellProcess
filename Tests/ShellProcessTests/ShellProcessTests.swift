@@ -2,10 +2,7 @@ import XCTest
 @testable import ShellProcess
 
 final class ShellProcessTests: XCTestCase {
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(ShellProcess().text, "Hello, World!")
+    func testOnePlusOne() throws {
+        XCTAssertEqual(1 + 1, 2, "Expect 1 + 1 = 2")
     }
 }
