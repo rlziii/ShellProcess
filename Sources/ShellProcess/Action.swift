@@ -22,11 +22,21 @@ extension ShellProcess.Action {
 
 extension ShellProcess.Action {
     /// An `Action` to invokes the "who" command to display who is logged in.
+    ///
+    /// This is just an example `Action`.
+    ///
     /// - Parameter currentTerminalOnly: When `true`, only returns information about the current terminal (i.e. "whoami").
     /// - Returns: An `Action` to be used by a `ShellProcess`.
     public static func who(currentTerminalOnly: Bool) -> ShellProcess.Action {
         .init(executablePath: "/usr/bin/who", arguments: currentTerminalOnly ? ["-m"] : [])
     }
+
+    /// An `Action` to invokes the "whoami" command to display who is logged in for the current terminal.
+    ///
+    /// This is just an example `Action`.
+    ///
+    /// - Returns: An `Action` to be used by a `ShellProcess`.
+    public static let whoAmI = ShellProcess.Action(executablePath: "/usr/bin/whoami", arguments: [""])
 
     /// An `Action` that allows for processing raw shell commands.
     /// - Parameter rawString: A raw command to be passed into a shell, e.g. "who -m".
